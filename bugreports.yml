@@ -13,6 +13,7 @@
     Появляется сообщение "Order placed successfully"
     В консоли разработчика видна ошибка 500 (Internal Server Error)
     Заказ не оформляется
+    https://github.com/Chawku/qa-engineer-project-84/blob/0ea0d43aa8255f984b44ebf10ba0a34e58e417c0/images/bug1.png
 
 - summary: |
     Отсутствует адаптивная верстка для мобильных устройств
@@ -32,6 +33,7 @@
     Отображается desktop-версия сайта:
     - Элементы интерфеса наложены друг на друга
     - Появляется горизонтальная полоса прокрутки
+    https://github.com/Chawku/qa-engineer-project-84/blob/0ea0d43aa8255f984b44ebf10ba0a34e58e417c0/images/bug2.png
 
 - summary: |
     Интерфейс сайта смещен влево, не центрируется по середине экрана
@@ -47,6 +49,7 @@
   actual-result: |
     Весь контент сайта прижат к левому краю
     Справа большое пустое пространство
+    https://github.com/Chawku/qa-engineer-project-84/blob/0ea0d43aa8255f984b44ebf10ba0a34e58e417c0/images/bug3.png
 
 - summary: |
     Отсутствует иконка флага Великобритании в меню выбора языка
@@ -61,6 +64,7 @@
   actual-result: |
     Для английского языка отображается только текст "English"
     Иконка флага отсутствует
+    https://github.com/Chawku/qa-engineer-project-84/blob/0ea0d43aa8255f984b44ebf10ba0a34e58e417c0/images/bug4.png
 
 - summary: |
     Не работает кнопка закрытия (крестик) в модальном окне оформления заказа
@@ -78,6 +82,7 @@
   actual-result: |
     Модальное окно не закрывается
     Кнопка "X" не реагирует на клики
+    https://github.com/Chawku/qa-engineer-project-84/blob/0ea0d43aa8255f984b44ebf10ba0a34e58e417c0/images/bug5.png
 
 - summary: |
     В списке фильтров "Brand" присутствует пустой пункт без названия, который при выборе отображает товары
@@ -95,3 +100,71 @@
     В списке присутствует пустой пункт без названия
     При выборе этого пункта отображаются товары без указанного бренда или с пустым значением бренда
     В результатах фильтрации показываются товары, которые не должны попадать в выборку
+    https://github.com/Chawku/qa-engineer-project-84/blob/0ea0d43aa8255f984b44ebf10ba0a34e58e417c0/images/bug6.png
+
+- summary: |
+    Нельзя найти товар из любой страницы каталога
+  environment: |
+    Firefox 126.0.1 (64-bit)
+    ОС Windows 11 24H2
+  steps-to-reproduce: |
+    1. Выбрать любой товар (например, "Red Lipstick")
+    2. Перейти на следующую страницу каталога
+    3. Ввести в поиск название этого товара
+  expected-result: |
+    В каталоге выводится карточка этого товара
+  actual-result: |
+    Выводится надпись "Nothing found!"
+    https://github.com/Chawku/qa-engineer-project-84/blob/0ea0d43aa8255f984b44ebf10ba0a34e58e417c0/images/bug7.png
+
+- summary: |
+    Нельзя открыть изображение на странице товара товара
+  environment: |
+    Firefox 126.0.1 (64-bit)
+    ОС Windows 11 24H2
+  steps-to-reproduce: |
+    1. Нажать на любой товар (например, "Red Lipstick")
+    2. Открыть изображение товара
+  expected-result: |
+    Можно открыть изображение и приблизить его
+  actual-result: |
+    Изображение не кликабельно
+
+- summary: |
+    При добавлении разных товаров выводится неверная сумма
+  environment: |
+    Firefox 126.0.1 (64-bit)
+    ОС Windows 11 24H2
+  steps-to-reproduce: |
+    1. Добавить два любых разных товара
+    2. Открыть корзину
+  expected-result: |
+    Итоговая цена соответствует сумме цен товаров 
+  actual-result: |
+    Итоговая сумма выше на 1 цент
+    https://github.com/Chawku/qa-engineer-project-84/blob/a59bc8d5b17060119de58779d2396b1745c70a8f/images/bug9.png
+
+- summary: |
+    Карточки товаров не переведены на русский язык
+  environment: |
+    Firefox 126.0.1 (64-bit)
+    ОС Windows 11 24H2
+  steps-to-reproduce: |
+    1. Открыть страницу любого товара
+  expected-result: |
+    Название и описание товара на русском языке
+  actual-result: |
+    Название и описание товаров не переведены на русский язык
+
+- summary: |
+    Не работает хэштег на странице товара
+  environment: |
+    Firefox 126.0.1 (64-bit)
+    ОС Windows 11 24H2
+  steps-to-reproduce: |
+    1. Открыть страницу любого товара
+    2. Нажать на хэштег
+  expected-result: |
+    Переносит на страницу с выбранной категорией товаров
+  actual-result: |
+    Ничего не происходит

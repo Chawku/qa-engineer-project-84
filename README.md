@@ -1,7 +1,7 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/Chawku/qa-engineer-project-84/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Chawku/qa-engineer-project-84/actions)
 
-# Тестирование интернет-магазина
+# Тестирование [интернет-магазина](https://products-store-ru.hexlet.app)
 
 Проект посвящен тестированию функциональности и удобства использования интернет-магазина. Основная цель — убедиться, что сайт корректно работает для пользователей и соответствует всем заявленным требованиям.
 

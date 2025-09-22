@@ -93,3 +93,4 @@ bugreports:
       Выводится надпись "Nothing found!"
     actual-result: |
       Выводятся все товары в каталоге
+      https://github.com/Chawku/qa-engineer-project-84/blob/a4a6e90122ee3fffd7670c306146adb42a8302e5/images/regressbug1.png

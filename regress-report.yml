@@ -94,3 +94,17 @@ bugreports:
     actual-result: |
       Выводятся все товары в каталоге
       https://github.com/Chawku/qa-engineer-project-84/blob/a4a6e90122ee3fffd7670c306146adb42a8302e5/images/regressbug1.png
+
+  - summary: |
+      В мобильной версии сайта меню фильтров расположено в конце страницы
+    environment: |
+      iPhone 12 iOS 17.5, Safari Mobile
+      Разрешение экрана: 390x844
+      https://products-store-v2-ru.hexlet.app/
+    steps-to-reproduce: |
+      1. Открыть мобильную версию сайта интернет-магазина
+      2. Промотать вниз
+    expected-result: |
+      Меню фильтров должно отображаться в верхней части страницы или быть легко доступным без необходимости прокрутки
+    actual-result: |
+      Элементы интерфейса для работы с фильтрами и поиска товаров находятся в конце страницы, что затрудняет их использование
